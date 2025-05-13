@@ -105,6 +105,9 @@
     <ClInclude Include="Class\Player.h">
       <Filter>Class</Filter>
     </ClInclude>
+    <ClInclude Include="Class\PlayerAnimation.h">
+      <Filter>Class</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base\Main.cpp">
@@ -141,6 +144,9 @@
       <Filter>Class</Filter>
     </ClCompile>
     <ClCompile Include="Class\Player.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\PlayerAnimation.cpp">
       <Filter>Class</Filter>
     </ClCompile>
   </ItemGroup>
