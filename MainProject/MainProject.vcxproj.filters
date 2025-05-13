@@ -102,6 +102,9 @@
     <ClInclude Include="Class\SpriteRender.h">
       <Filter>Class</Filter>
     </ClInclude>
+    <ClInclude Include="Class\Player.h">
+      <Filter>Class</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base\Main.cpp">
@@ -135,6 +138,9 @@
       <Filter>Class</Filter>
     </ClCompile>
     <ClCompile Include="Class\SpriteRender.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Player.cpp">
       <Filter>Class</Filter>
     </ClCompile>
   </ItemGroup>
