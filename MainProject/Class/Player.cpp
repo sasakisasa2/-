@@ -3,17 +3,6 @@
 void Player::SetDate()
 {
 	SetImagesNumber(Vector2(9, 1), PlayerID);
-
-	SetPosition
-	(
-		//Œ´“_‚ª^‚ñ’†‚Ìˆ×ˆÚ“®
-		Vector2
-		(
-			(float)GetSprite(BackGroundForest).size.x / 2.0f,
-			(float)DXTK->SwapChain.Height / 2.0f
-		),
-		BackGroundForest
-	);
 }
 
 void Player::UpDate()
