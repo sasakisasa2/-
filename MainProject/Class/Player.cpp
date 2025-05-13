@@ -1,9 +1,7 @@
 #include "Player.h"
 
 void Player::SetDate()
-{
-	SetImagesNumber(Vector2(9, 1), PlayerID);
-}
+{ }
 
 void Player::UpDate()
 {
