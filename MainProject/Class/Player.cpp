@@ -1,7 +1,9 @@
-#include "BG.h"
+#include "Player.h"
 
-void BG::SetDate()
+void Player::SetDate()
 {
+	SetImagesNumber(Vector2(9, 1), PlayerID);
+
 	SetPosition
 	(
 		//Œ´“_‚ª^‚ñ’†‚Ìˆ×ˆÚ“®
@@ -14,7 +16,7 @@ void BG::SetDate()
 	);
 }
 
-void BG::UpDate()
+void Player::UpDate()
 {
 	Vector2 pos = GetPosition(BackGroundForest);
 

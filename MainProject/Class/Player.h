@@ -4,7 +4,7 @@
 using namespace DirectX;
 using namespace SimpleMath;
 
-class BG:public SpriteRender
+class Player:public SpriteRender
 {
 private:
 
@@ -12,7 +12,8 @@ private:
 
 
 public:
-	BG():speed(500.0f){ }
+	Player():speed(100.0f){ }
+	~Player() { Initialize(PlayerID); }
 	void SetDate()override;
 	void UpDate()override;
 
