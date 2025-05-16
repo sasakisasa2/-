@@ -10,4 +10,17 @@ void PlayerAnimation::UpDate()
 	Vector2 count = GetImagesCount(PlayerID);
 
 	time += DXTK->Time.deltaTime;
+
+	if (time >= END_TIME)
+	{
+		if (isSwitch) { count.x--; }
+		else          { count.x++; }
+		
+		if (count.x == GetImagesNumber(PlayerID).x)
+			isSwitch = true;
+		if (count.x == 0.0f)
+			isSwitch = false;
+	}
+
+	SetImagesCount(count, PlayerID);
 }
