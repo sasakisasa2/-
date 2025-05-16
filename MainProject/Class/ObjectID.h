@@ -11,7 +11,7 @@ namespace ObjectID
 	};
 	enum Effects
 	{
-		PlayerEffectID = Enemy + 1
+		PlayerEffectID = EnemyID + 1
 	};
 
 	static constexpr int MAX_ID_NUMBER = PlayerEffectID + 1;
