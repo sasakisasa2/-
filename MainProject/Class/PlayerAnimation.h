@@ -8,7 +8,7 @@ class PlayerAnimation:public SpriteRender
 {
 private:
 	float time;
-	const float endTime = 1;
+	const float END_TIME = 1;
 public:
 	PlayerAnimation():time(0){}
 	~PlayerAnimation() { Initialize(PlayerID); }
