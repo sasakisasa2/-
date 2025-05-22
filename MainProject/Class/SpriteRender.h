@@ -32,7 +32,7 @@ protected:
 
 #pragma region Getterä÷êî
 
-	static DirectXTK::Sprite const GetSprite      (int ID) { return sprite      [ID]; }
+	static DirectXTK::Sprite const GetSprite  (int ID) { return sprite      [ID]; }
 	static Vector2       const GetPosition    (int ID) { return position    [ID]; }
 	static Vector2       const GetImagesCount (int ID) { return imagesCount [ID]; }
 	static Vector2       const GetImagesNumber(int ID) { return imagesNumber[ID]; }
@@ -44,6 +44,11 @@ protected:
 
 #pragma region Setterä÷êî
 
+	static void SetSpriteSize(Vector2 setSize, int ID) 
+	{ 
+		sprite[ID].size.x = setSize.x; 
+		sprite[ID].size.y = setSize.y;
+	}
 	static void SetPosition    (Vector2 setPos,   int ID) { position[ID]     = setPos;    }
 	static void SetImagesCount (Vector2 setCount, int ID) { imagesCount[ID]  = setCount;  }
 	static void SetImagesNumber(Vector2 setNumber,int ID) { imagesNumber[ID] = setNumber; }
