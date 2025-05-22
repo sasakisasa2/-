@@ -13,6 +13,8 @@ void PlayerAnimation::UpDate()
 
 	if (time >= END_TIME)
 	{
+		time = 0.0f;
+
 		if (isSwitch) { count.x--; }
 		else          { count.x++; }
 		
