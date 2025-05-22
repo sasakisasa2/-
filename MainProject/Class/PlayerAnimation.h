@@ -1,10 +1,7 @@
 #pragma once
-#include"Player.h"
+#include"SpriteRender.h"
 
-using namespace DirectX;
-using namespace SimpleMath;
-
-class PlayerAnimation:public Player
+class PlayerAnimation:public SpriteRender
 {
 private:
 	float time;
@@ -12,7 +9,7 @@ private:
 	const float END_TIME = 1;
 public:
 	PlayerAnimation():time(0),isSwitch(false){}
-	~PlayerAnimation() { Initialize(PlayerID); }
+	~PlayerAnimation() = default;
 	void SetDate()override;
 	void UpDate()override;
 
