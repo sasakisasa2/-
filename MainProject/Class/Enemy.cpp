@@ -8,4 +8,13 @@ void Enemy::SetDate()
 
 void Enemy::UpDate()
 {
+	Vector2 pos = GetPosition(EnemyID);
+
+	Vector2 move = GetPosition(PlayerID) - pos;
+
+	move.Normalize();
+
+	pos += move * speed * DXTK->Time.deltaTime;
+
+	SetPosition(pos, EnemyID);
 }
