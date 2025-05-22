@@ -15,7 +15,7 @@ using namespace SimpleMath;
 // Initialize member variables.
 MainScene::MainScene()
 {
-
+	PlayerOB = new Player();
 }
 
 // Start is called after the scene is created.
@@ -49,6 +49,7 @@ void MainScene::CreateResources()
 void MainScene::Initialize()
 {
 	backGround.SetDate();
+	PlayerOB->SetDate();
 }
 
 // Releasing resources required for termination.
@@ -89,7 +90,7 @@ NextScene MainScene::Update(const float deltaTime)
 	// TODO: Add your game logic here.
 
 	backGround.UpDate();
-
+	PlayerOB->UpDate();
 	return NextScene::Continue;
 }
 
