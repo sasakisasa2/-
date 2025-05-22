@@ -10,5 +10,5 @@ public:
 	void SetDate()override;
 	void UpDate()override;
 
-	void RegisterCollision(int ID, SpriteRender* object);
+	void RegisterCollision(SpriteRender* object);
 };
