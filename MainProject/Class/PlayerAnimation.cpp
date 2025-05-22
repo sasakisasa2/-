@@ -7,22 +7,22 @@ void PlayerAnimation::SetDate()
 
 void PlayerAnimation::UpDate()
 {
-	Vector2 count = GetImagesCount(PlayerID);
-
 	time += DXTK->Time.deltaTime;
 
 	if (time >= END_TIME)
 	{
+		Vector2 count = GetImagesCount(PlayerID);
+
 		time = 0.0f;
 
 		if (isSwitch) { count.x--; }
 		else          { count.x++; }
 		
-		if (count.x == GetImagesNumber(PlayerID).x)
+		if (count.x == GetImagesNumber(PlayerID).x-1)
 			isSwitch = true;
 		if (count.x == 0.0f)
 			isSwitch = false;
-	}
 
-	SetImagesCount(count, PlayerID);
+		SetImagesCount(count, PlayerID);
+	}
 }
