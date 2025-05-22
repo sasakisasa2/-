@@ -95,10 +95,8 @@ void SpriteRender::Render()
 		minSize.x = size.x * imagesCount[ID].x;
 		minSize.y = size.y * imagesCount[ID].y;
 
-		Vector2 maxSize;//‰æ‘œ‚Ì•
-		maxSize = minSize + size;
-
-		RECT rect = RectWH((int)minSize.x, (int)minSize.y, (int)maxSize.x, (int)maxSize.y);
+		RECT rect;
+		rect = RectWH((int)minSize.x, (int)minSize.y, (int)size.x, (int)size.y);
 
 		spBatch->Draw
 		(
