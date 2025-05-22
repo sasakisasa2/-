@@ -108,6 +108,9 @@
     <ClInclude Include="Class\PlayerAnimation.h">
       <Filter>Class</Filter>
     </ClInclude>
+    <ClInclude Include="Class\Enemy.h">
+      <Filter>Class</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base\Main.cpp">
@@ -147,6 +150,9 @@
       <Filter>Class</Filter>
     </ClCompile>
     <ClCompile Include="Class\PlayerAnimation.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Enemy.cpp">
       <Filter>Class</Filter>
     </ClCompile>
   </ItemGroup>
