@@ -111,7 +111,7 @@
     <ClInclude Include="Class\Enemy.h">
       <Filter>Class</Filter>
     </ClInclude>
-    <ClInclude Include="Class\CollisionDetecte.h">
+    <ClInclude Include="Class\CollisionDetection.h">
       <Filter>Class</Filter>
     </ClInclude>
   </ItemGroup>
@@ -158,7 +158,7 @@
     <ClCompile Include="Class\Enemy.cpp">
       <Filter>Class</Filter>
     </ClCompile>
-    <ClCompile Include="Class\CollisionDetecte.cpp">
+    <ClCompile Include="Class\CollisionDetection.cpp">
       <Filter>Class</Filter>
     </ClCompile>
   </ItemGroup>

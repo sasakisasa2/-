@@ -1,7 +1,7 @@
 #pragma once
 #include"SpriteRender.h"
 
-class Enemy:public SpriteRender
+class CollisionDetecte:public SpriteRender
 {
 private:
 
