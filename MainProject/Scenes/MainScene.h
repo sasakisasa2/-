@@ -42,8 +42,9 @@ public:
 	void Render() override;
 
 private:
-	SpriteRender spRen;
+	SpriteRender* spRen;
 	SpriteRender* PlayerOB;
+	SpriteRender* EnemyOB;
 	BG backGround;
 
 };

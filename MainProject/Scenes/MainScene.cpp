@@ -15,6 +15,7 @@ using namespace SimpleMath;
 // Initialize member variables.
 MainScene::MainScene()
 {
+	spRen = new Player();
 	PlayerOB = new Player();
 }
 
@@ -36,7 +37,7 @@ void MainScene::Start()
 // These are the resources that depend on the device.
 void MainScene::CreateDeviceDependentResources()
 {
-	spRen.Load();
+	spRen->Load();
 }
 
 // Create independent resources.
@@ -102,7 +103,7 @@ void MainScene::Render()
 	DXTK->Command.RTSetupAndClear(Colors::CornflowerBlue);
 
 
-	spRen.Render();
+	spRen->Render();
 
 	//backGround.Render(spriteBatch);
 
