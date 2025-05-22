@@ -1,10 +1,10 @@
 #pragma once
-#include"SpriteRender.h"
+#include"Player.h"
 
 using namespace DirectX;
 using namespace SimpleMath;
 
-class PlayerAnimation:public SpriteRender
+class PlayerAnimation:public Player
 {
 private:
 	float time;
