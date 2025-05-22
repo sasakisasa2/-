@@ -6,6 +6,7 @@
 
 #include "Scene.h"
 #include"../Class/BG.h"
+#include"../Class/Player.h"
 #include"..\Class\SpriteRender.h"
 
 using Microsoft::WRL::ComPtr;
@@ -42,7 +43,7 @@ public:
 
 private:
 	SpriteRender spRen;
-
+	SpriteRender* PlayerOB;
 	BG backGround;
 
 };

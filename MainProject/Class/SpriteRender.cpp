@@ -87,18 +87,16 @@ void SpriteRender::Render()
 		if (!isRender[ID])
 			continue;
 
-		Vector2 size;
+		Vector2 size;//ˆê–‡‚Ì‘å‚«‚³
 		size.x = (float)sprite[ID].size.x / imagesNumber[ID].x;
 		size.y = (float)sprite[ID].size.y / imagesNumber[ID].y;
 
-		Vector2 minSize;
+		Vector2 minSize;//‰æ‘œ‚ÌŒ´“_
 		minSize.x = size.x * imagesCount[ID].x;
 		minSize.y = size.y * imagesCount[ID].y;
 
-		Vector2 maxSize;
-		maxSize = minSize + size;
-
-		RECT rect = RectWH((int)minSize.x, (int)minSize.y, (int)maxSize.x, (int)maxSize.y);
+		RECT rect;
+		rect = RectWH((int)minSize.x, (int)minSize.y, (int)size.x, (int)size.y);
 
 		spBatch->Draw
 		(

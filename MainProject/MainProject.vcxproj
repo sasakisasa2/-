@@ -205,6 +205,8 @@
     <ClInclude Include="Class\BG.h" />
     <ClInclude Include="Class\GameObject.h" />
     <ClInclude Include="Class\ObjectID.h" />
+    <ClInclude Include="Class\Player.h" />
+    <ClInclude Include="Class\PlayerAnimation.h" />
     <ClInclude Include="Class\SpriteRender.h" />
     <ClInclude Include="Scenes\DontDestroyOnLoad.h" />
     <ClInclude Include="Scenes\MainScene.h" />
@@ -231,6 +233,8 @@
     <ClCompile Include="Base\wiGamepad\wiRawGamepad.cpp" />
     <ClCompile Include="Base\wiGamepad\wiXInput.cpp" />
     <ClCompile Include="Class\BG.cpp" />
+    <ClCompile Include="Class\Player.cpp" />
+    <ClCompile Include="Class\PlayerAnimation.cpp" />
     <ClCompile Include="Class\SpriteRender.cpp" />
     <ClCompile Include="Scenes\MainScene.cpp" />
   </ItemGroup>
