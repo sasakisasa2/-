@@ -7,6 +7,7 @@
 #include "Scene.h"
 #include"../Class/BG.h"
 #include"../Class/Player.h"
+#include"../Class/Enemy.h"
 #include"..\Class\SpriteRender.h"
 
 using Microsoft::WRL::ComPtr;

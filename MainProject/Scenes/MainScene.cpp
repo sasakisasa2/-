@@ -17,6 +17,7 @@ MainScene::MainScene()
 {
 	spRen = new Player();
 	PlayerOB = new Player();
+	EnemyOB = new Enemy();
 }
 
 // Start is called after the scene is created.
@@ -51,6 +52,7 @@ void MainScene::Initialize()
 {
 	backGround.SetDate();
 	PlayerOB->SetDate();
+	EnemyOB->SetDate();
 }
 
 // Releasing resources required for termination.
@@ -92,6 +94,8 @@ NextScene MainScene::Update(const float deltaTime)
 
 	backGround.UpDate();
 	PlayerOB->UpDate();
+	EnemyOB->UpDate();
+
 	return NextScene::Continue;
 }
 
