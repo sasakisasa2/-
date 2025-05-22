@@ -19,6 +19,5 @@ namespace ObjectID
 		L"BackGround.png",
 		L"Player.png",
 		L"Enemy.png",
-		L"PlayerEffect.png"
 	};
 };
