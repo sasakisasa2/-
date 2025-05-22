@@ -13,7 +13,7 @@ private:
 	PlayerAnimation anime;
 
 public:
-	Player():speed(100.0f){ }
+	Player():speed(500.0f){ }
 	~Player() { Initialize(PlayerID); }
 	void SetDate()override;
 	void UpDate()override;
