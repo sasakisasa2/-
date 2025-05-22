@@ -1,13 +1,12 @@
-#include "Player.h"
-#include "Enemy.h"
+#include "CollisionDetection.h"
 
-void Enemy::SetDate()
+void CollisionDetection::SetDate()
 { 
 	SetPosition(Vector2(600.0f, 600.0f), EnemyID);
 	SetSpriteSize(Vector2(100.0f,100.0f), EnemyID);
 }
 
-void Enemy::UpDate()
+void CollisionDetection::UpDate()
 {
 	Vector2 pos = GetPosition(EnemyID);
 
