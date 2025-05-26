@@ -61,8 +61,8 @@ protected:
 
 
 public:
-	SpriteRender() { Initialize(); }
-	~SpriteRender(){ Initialize(); }
+    SpriteRender() { Initialize(); }
+	virtual ~SpriteRender(){ }
 
 	static void Load();
 	virtual void SetDate() = 0;

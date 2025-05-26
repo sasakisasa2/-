@@ -36,7 +36,7 @@ void SpriteRender::Initialize(int ID)
 	color[ID]        = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
 	angle[ID]        = 0.0f;
 	spEffect[ID]     = SpriteEffects_None;
-	isRender[ID]     = true;
+	isRender[ID]     = false;
 
 }
 
