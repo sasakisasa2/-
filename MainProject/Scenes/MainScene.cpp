@@ -93,8 +93,19 @@ NextScene MainScene::Update(const float deltaTime)
 	// TODO: Add your game logic here.
 
 	backGround.UpDate();
-	PlayerOB->UpDate();
-	EnemyOB->UpDate();
+	if (PlayerOB)
+		PlayerOB->UpDate();
+
+	if (EnemyOB)
+	{
+		EnemyOB->UpDate();
+	}
+
+	if (CD.Detection(PlayerID, EnemyID))
+	{
+		delete EnemyOB;
+		EnemyOB = nullptr;
+	}
 
 	return NextScene::Continue;
 }
