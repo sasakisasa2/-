@@ -17,4 +17,5 @@ bool CollisionDetection::Detection(int ID, int ID2)
 void CollisionDetection::RegisterCollision(SpriteRender* object)
 {
 	delete object;
+	object = nullptr;
 }
