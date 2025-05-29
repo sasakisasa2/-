@@ -35,8 +35,8 @@ void CollisionDetection::RegisterCollision(int ID1, int ID2)
 		{
 			if (Detection(ID1, ID2))
 			{
-				SetIsRender(false,ID1);
-				SetIsRender(false,ID2);
+				cd1[j]->Collision();
+				cd2[j]->Collision();
 			}
 		}
 	}
