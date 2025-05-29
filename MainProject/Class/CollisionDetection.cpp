@@ -14,8 +14,30 @@ bool CollisionDetection::Detection(int ID, int ID2)
 		return true;
 }
 
-void CollisionDetection::RegisterCollision(SpriteRender* object)
+void CollisionDetection::Detection(int ID, SpriteRender* ob)
+{
+	cmap[ID].emplace_back(ob);
+}
+
+void CollisionDetection::RegisterCollision(SpriteRender*& object)
 {
 	delete object;
 	object = nullptr;
+}
+
+void CollisionDetection::RegisterCollision(int ID1, int ID2)
+{
+	std::vector<SpriteRender*>& cd1 = cmap[ID1];
+	std::vector<SpriteRender*>& cd2 = cmap[ID2];
+	for (int i = 0; i < cd1.size(); i++)
+	{
+		for (int j = 0; j < cd2.size(); j++) 
+		{
+			if (Detection(ID1, ID2))
+			{
+				SetIsRender(false,ID1);
+				SetIsRender(false,ID2);
+			}
+		}
+	}
 }
