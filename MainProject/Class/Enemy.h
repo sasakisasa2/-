@@ -12,5 +12,5 @@ public:
 	~Enemy()override{Initialize(EnemyID);}
 	void SetDate()override;
 	void UpDate()override;
-
+	void Collision()override;
 };
