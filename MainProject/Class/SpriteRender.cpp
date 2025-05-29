@@ -37,7 +37,6 @@ void SpriteRender::Initialize(int ID)
 	angle[ID]        = 0.0f;
 	spEffect[ID]     = SpriteEffects_None;
 	isRender[ID]     = false;
-
 }
 
 void SpriteRender::Load()

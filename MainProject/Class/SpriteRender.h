@@ -65,8 +65,9 @@ public:
 	virtual ~SpriteRender(){ }
 
 	static void Load();
-	virtual void SetDate() = 0;
-	virtual void UpDate() = 0;
+	virtual void SetDate()   = 0;
+	virtual void UpDate()    = 0;
+	virtual void Collision() = 0;
 	static void Render();
 	static bool const GetIsRender(int ID) { return isRender[ID]; }
 	
