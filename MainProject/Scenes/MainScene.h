@@ -44,10 +44,7 @@ public:
 	void Render() override;
 
 private:
+	SpriteRender* ob[MAX_ID_NUMBER];
 	SpriteRender* spRen;
-	SpriteRender* PlayerOB;
-	SpriteRender* EnemyOB;
 	CollisionDetection CD;
-	BG backGround;
-
 };

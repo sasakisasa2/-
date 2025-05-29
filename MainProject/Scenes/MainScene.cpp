@@ -16,8 +16,12 @@ using namespace SimpleMath;
 MainScene::MainScene()
 {
 	spRen = new Player();
-	PlayerOB = new Player();
-	EnemyOB = new Enemy();
+	ob[BackGroundForest] = new BG();
+	ob[PlayerID] = new Player();
+	ob[EnemyID] = new Enemy();
+	CD.Detection(PlayerID, ob[PlayerID]);
+	CD.Detection(EnemyID, ob[EnemyID]);
+
 }
 
 // Start is called after the scene is created.
@@ -50,9 +54,10 @@ void MainScene::CreateResources()
 // Initialize a variable and audio resources.
 void MainScene::Initialize()
 {
-	backGround.SetDate();
-	PlayerOB->SetDate();
-	EnemyOB->SetDate();
+	for (int i = 0; i < MAX_ID_NUMBER; i++)
+	{
+		ob[i]->SetDate();
+	}
 }
 
 // Releasing resources required for termination.
@@ -91,21 +96,19 @@ NextScene MainScene::Update(const float deltaTime)
 	UNREFERENCED_PARAMETER(deltaTime);
 
 	// TODO: Add your game logic here.
-
-	backGround.UpDate();
-	if (PlayerOB)
-		PlayerOB->UpDate();
-
-	if (EnemyOB)
+	for (int i = 0; i < MAX_ID_NUMBER; i++)
 	{
-		EnemyOB->UpDate();
+		if (ob[i])
+		{
+			ob[i]->UpDate();
+		}
+		if (!ob[i]->GetIsRender(i))
+		{
+			CD.RegisterCollision(ob[i]);
+		}
 	}
 
-	if (CD.Detection(PlayerID, EnemyID))
-	{
-		delete EnemyOB;
-		EnemyOB = nullptr;
-	}
+	CD.RegisterCollision(PlayerID,EnemyID);
 
 	return NextScene::Continue;
 }
