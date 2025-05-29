@@ -10,12 +10,12 @@ class Player:public SpriteRender
 private:
 
 	float speed;
-	PlayerAnimation anime;
+	SpriteRender* anime;
 
 public:
-	Player():speed(500.0f){ }
+	Player():speed(500.0f){ anime = new PlayerAnimation(); }
 	~Player() { Initialize(PlayerID); }
 	void SetDate()override;
 	void UpDate()override;
-
+	void Collision()override;
 };

@@ -3,7 +3,7 @@
 void Player::SetDate()
 { 
 	SetPosition(Vector2(300.0f, 300.0f), PlayerID);
-	anime.SetDate();
+	anime->SetDate();
 }
 
 void Player::UpDate()
@@ -46,5 +46,10 @@ void Player::UpDate()
 
 	SetPosition(pos, PlayerID);
 
-	anime.UpDate();
+	anime->UpDate();
+}
+
+void Player::Collision()
+{
+	SetIsRender(false, PlayerID);
 }
