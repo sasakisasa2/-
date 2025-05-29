@@ -1,17 +1,17 @@
 #include "CollisionDetection.h"
 
-bool CollisionDetection::Detection(int ID, int ID2)
+bool CollisionDetection::Detection(Vector2 ob1, Vector2 ob2)
 {
 	float ratio = sqrt
 	(
-		(GetPosition(ID).x - GetPosition(ID2).x) *
-		(GetPosition(ID).x - GetPosition(ID2).x) +
-		(GetPosition(ID).y - GetPosition(ID2).y) *
-		(GetPosition(ID).y - GetPosition(ID2).y)
+		(ob1.x - ob2.x) * (ob1.x - ob2.x) +
+		(ob1.y - ob2.y) * (ob1.y - ob2.y)
 	);
 
-	if(ratio <= 10.0f)
+	if (ratio <= 10.0f)
 		return true;
+
+	return false;
 }
 
 void CollisionDetection::Detection(int ID, SpriteRender* ob)
@@ -33,9 +33,9 @@ void CollisionDetection::RegisterCollision(int ID1, int ID2)
 	{
 		for (int j = 0; j < cd2.size(); j++) 
 		{
-			if (Detection(ID1, ID2))
+			if (Detection(cd1[i]->GetPosition(ID1), cd2[j]->GetPosition(ID2)))
 			{
-				cd1[j]->Collision();
+				cd1[i]->Collision();
 				cd2[j]->Collision();
 			}
 		}

@@ -2,16 +2,14 @@
 #include"SpriteRender.h"
 #include<map>
 
-class CollisionDetection:public SpriteRender
+class CollisionDetection
 {
 private:
 public:
 	CollisionDetection(){ }
 	~CollisionDetection() { }
-	void SetDate()override {}
-	void UpDate()override {}
 
-	bool Detection(int ID, int ID2);
+	bool Detection(Vector2 ob1, Vector2 ob2);
 	void Detection(int ID, SpriteRender*);
 
 	void RegisterCollision(SpriteRender*& object);
