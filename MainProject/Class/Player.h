@@ -14,7 +14,7 @@ private:
 
 public:
 	Player():speed(500.0f){ anime = new PlayerAnimation(); }
-	~Player() { Initialize(PlayerID); }
+	~Player()override { Initialize(PlayerID); }
 	void SetDate()override;
 	void UpDate()override;
 	void Collision()override;
