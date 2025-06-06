@@ -100,14 +100,16 @@ NextScene MainScene::Update(const float deltaTime)
 	{
 		if (ob[i])
 		{
+			if (!ob[0]->GetIsRender(i))
+			{
+				delete ob[i];
+				ob[i] = nullptr;
+				continue;
+			}
 			ob[i]->UpDate();
 		}
-		if (!ob[i]->GetIsRender(i))
-		{
-			CD.RegisterCollision(ob[i]);
-		}
 	}
-
+	if(ob[PlayerID]&&ob[EnemyID])
 	CD.RegisterCollision(PlayerID,EnemyID);
 
 	return NextScene::Continue;
