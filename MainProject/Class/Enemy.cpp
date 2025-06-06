@@ -19,3 +19,8 @@ void Enemy::UpDate()
 
 	SetPosition(pos, EnemyID);
 }
+
+void Enemy::Collision()
+{
+	SetIsRender(false,EnemyID);
+}

@@ -12,5 +12,6 @@ public:
 	~PlayerAnimation() = default;
 	void SetDate()override;
 	void UpDate()override;
+	void Collision() {};
 
 };

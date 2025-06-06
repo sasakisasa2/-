@@ -8,6 +8,7 @@
 #include"../Class/BG.h"
 #include"../Class/Player.h"
 #include"../Class/Enemy.h"
+#include"../Class/CollisionDetection.h"
 #include"..\Class\SpriteRender.h"
 
 using Microsoft::WRL::ComPtr;
@@ -43,9 +44,7 @@ public:
 	void Render() override;
 
 private:
+	SpriteRender* ob[MAX_ID_NUMBER];
 	SpriteRender* spRen;
-	SpriteRender* PlayerOB;
-	SpriteRender* EnemyOB;
-	BG backGround;
-
+	CollisionDetection CD;
 };

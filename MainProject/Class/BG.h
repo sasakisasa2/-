@@ -15,5 +15,5 @@ public:
 	BG():speed(500.0f){ }
 	void SetDate()override;
 	void UpDate()override;
-
+	void Collision() {};
 };
