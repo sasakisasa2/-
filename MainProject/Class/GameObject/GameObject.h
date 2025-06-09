@@ -53,18 +53,18 @@ public:
 
 #pragma region Setterä÷êî
 
-	static void SetSpriteSize(Vector2 setSize, int ID)
+	static void SetSpriteSize(XMUINT2 setSize, int ID, int count)
 	{
-		sprite[ID].size.x = setSize.x;
-		sprite[ID].size.y = setSize.y;
+		sprite[ID][count].size.x = setSize.x;
+		sprite[ID][count].size.y = setSize.y;
 	}
-	static void SetPosition    (Vector2 setPos, int ID)          { position[ID] = setPos;        }
-	static void SetImagesCount (Vector2 setCount, int ID)        { imagesCount[ID] = setCount;   }
-	static void SetImagesNumber(Vector2 setNumber, int ID)       { imagesNumber[ID] = setNumber; }
-	static void SetColor       (Color   setColor, int ID)        { color[ID] = setColor;         }
-	static void SetAngle       (float   setAngle, int ID)        { angle[ID] = setAngle;         }
-	static void SetSpEffect    (SpriteEffects setEffect, int ID) { spEffect[ID] = setEffect;     }
-	static void SetIsRender    (bool    setIsRen, int ID)        { isRender[ID] = setIsRen;      }
+	static void SetPosition    (Vector2 setPos,   int ID, int count)       { position    [ID][count] = setPos;    }
+	static void SetImagesCount (Vector2 setCount, int ID, int count)       { imagesCount [ID][count] = setCount;  }
+	static void SetImagesNumber(Vector2 setNumber,int ID, int count)       { imagesNumber[ID][count] = setNumber; }
+	static void SetColor       (Color   setColor, int ID, int count)       { color       [ID][count] = setColor;  }
+	static void SetAngle       (float   setAngle, int ID, int count)       { angle       [ID][count] = setAngle;  }
+	static void SetSpEffect    (SpriteEffects setEffect, int ID, int count){ spEffect    [ID][count] = setEffect; }
+	static void SetIsRender    (bool    setIsRen, int ID, int count)       { isRender    [ID][count] = setIsRen;  }
 
 #pragma endregion
 
