@@ -1,5 +1,5 @@
 #pragma once
-#include"GameObject.h"
+#include"../MainProject/Class/GameObject/GameObject.h"
 
 class PlayerAnimation:public GameObject
 {

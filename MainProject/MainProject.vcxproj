@@ -202,14 +202,13 @@
     <ClInclude Include="Base\wiGamepad\wiRawGamepad.h" />
     <ClInclude Include="Base\wiGamepad\wiVector.h" />
     <ClInclude Include="Base\wiGamepad\wiXInput.h" />
-    <ClInclude Include="Class\BG.h" />
     <ClInclude Include="Class\BG\BG.h" />
-    <ClInclude Include="Class\CollisionDetection.h" />
-    <ClInclude Include="Class\Enemy.h" />
+    <ClInclude Include="Class\Collision\CollisionDetection.h" />
+    <ClInclude Include="Class\Enemy\Enemy.h" />
+    <ClInclude Include="Class\GameObject\GameObject.h" />
     <ClInclude Include="Class\ObjectID.h" />
-    <ClInclude Include="Class\Player.h" />
-    <ClInclude Include="Class\PlayerAnimation.h" />
-    <ClInclude Include="Class\SpriteRender.h" />
+    <ClInclude Include="Class\Player\Animation\PlayerAnimation.h" />
+    <ClInclude Include="Class\Player\Player.h" />
     <ClInclude Include="Scenes\DontDestroyOnLoad.h" />
     <ClInclude Include="Scenes\MainScene.h" />
     <ClInclude Include="Scenes\Scene.h" />
@@ -234,13 +233,12 @@
     <ClCompile Include="Base\wiGamepad\wiMath.cpp" />
     <ClCompile Include="Base\wiGamepad\wiRawGamepad.cpp" />
     <ClCompile Include="Base\wiGamepad\wiXInput.cpp" />
-    <ClCompile Include="Class\BG.cpp" />
     <ClCompile Include="Class\BG\BG.cpp" />
-    <ClCompile Include="Class\CollisionDetection.cpp" />
-    <ClCompile Include="Class\Enemy.cpp" />
-    <ClCompile Include="Class\Player.cpp" />
-    <ClCompile Include="Class\PlayerAnimation.cpp" />
-    <ClCompile Include="Class\SpriteRender.cpp" />
+    <ClCompile Include="Class\Collision\CollisionDetection.cpp" />
+    <ClCompile Include="Class\Enemy\Enemy.cpp" />
+    <ClCompile Include="Class\GameObject\GameObject.cpp" />
+    <ClCompile Include="Class\Player\Animation\PlayerAnimation.cpp" />
+    <ClCompile Include="Class\Player\Player.cpp" />
     <ClCompile Include="Scenes\MainScene.cpp" />
   </ItemGroup>
   <ItemGroup>

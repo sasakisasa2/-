@@ -111,26 +111,23 @@
     <ClInclude Include="Class\ObjectID.h">
       <Filter>Class</Filter>
     </ClInclude>
-    <ClInclude Include="Class\BG.h">
-      <Filter>Class\BG</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\CollisionDetection.h">
-      <Filter>Class\Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\Enemy.h">
-      <Filter>Class\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\Player.h">
-      <Filter>Class\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\PlayerAnimation.h">
-      <Filter>Class\Player\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\SpriteRender.h">
-      <Filter>Class\GameObject</Filter>
-    </ClInclude>
     <ClInclude Include="Class\BG\BG.h">
       <Filter>Class\BG</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Enemy\Enemy.h">
+      <Filter>Class\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Collision\CollisionDetection.h">
+      <Filter>Class\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\GameObject\GameObject.h">
+      <Filter>Class\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Player\Player.h">
+      <Filter>Class\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Player\Animation\PlayerAnimation.h">
+      <Filter>Class\Player\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -161,26 +158,23 @@
     <ClCompile Include="Base\Toolkits\DXTKCamera.cpp">
       <Filter>Base\Toolkit</Filter>
     </ClCompile>
-    <ClCompile Include="Class\BG.cpp">
-      <Filter>Class\BG</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\CollisionDetection.cpp">
-      <Filter>Class\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\Enemy.cpp">
-      <Filter>Class\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\Player.cpp">
-      <Filter>Class\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\PlayerAnimation.cpp">
-      <Filter>Class\Player\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\SpriteRender.cpp">
-      <Filter>Class\GameObject</Filter>
-    </ClCompile>
     <ClCompile Include="Class\BG\BG.cpp">
       <Filter>Class\BG</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Enemy\Enemy.cpp">
+      <Filter>Class\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Collision\CollisionDetection.cpp">
+      <Filter>Class\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\GameObject\GameObject.cpp">
+      <Filter>Class\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Player\Player.cpp">
+      <Filter>Class\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Player\Animation\PlayerAnimation.cpp">
+      <Filter>Class\Player\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

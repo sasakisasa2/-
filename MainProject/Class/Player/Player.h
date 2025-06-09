@@ -1,6 +1,6 @@
 #pragma once
-#include"GameObject.h"
-#include"PlayerAnimation.h"
+#include"../GameObject/GameObject.h"
+#include"../Player/Animation/PlayerAnimation.h"
 
 using namespace DirectX;
 using namespace SimpleMath;
