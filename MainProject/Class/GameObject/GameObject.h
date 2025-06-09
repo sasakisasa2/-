@@ -5,6 +5,7 @@
 #include"vector"
 #include"map"
 
+using namespace std;
 using namespace DirectX;
 using namespace SimpleMath;
 using namespace ObjectID;
