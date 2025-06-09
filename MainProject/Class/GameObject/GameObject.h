@@ -3,6 +3,7 @@
 #include"../MainProject/Base/pch.h"
 #include"../MainProject/Base/dxtk.h"
 #include"vector"
+#include"map"
 
 using namespace DirectX;
 using namespace SimpleMath;
