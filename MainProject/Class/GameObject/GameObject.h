@@ -1,7 +1,7 @@
 #pragma once
 
-#include"..\Base\pch.h"
-#include"..\Base\dxtk.h"
+#include"../MainProject/Base/pch.h"
+#include"../MainProject/Base/dxtk.h"
 #include"vector"
 
 using namespace DirectX;
