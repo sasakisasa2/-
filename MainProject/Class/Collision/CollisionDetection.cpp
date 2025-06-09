@@ -14,7 +14,7 @@ bool CollisionDetection::Detection(Vector2 ob1, Vector2 ob2)
 	return false;
 }
 
-void CollisionDetection::Detection(int ID, SpriteRender*& ob)
+void CollisionDetection::Detection(int ID, GameObject*& ob)
 {
 	cmap[ID].emplace_back(ob);
 }
