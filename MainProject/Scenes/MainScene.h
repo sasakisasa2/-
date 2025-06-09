@@ -5,11 +5,11 @@
 #pragma once
 
 #include "Scene.h"
-#include"../Class/BG.h"
-#include"../Class/Player.h"
-#include"../Class/Enemy.h"
-#include"../Class/CollisionDetection.h"
-#include"..\Class\SpriteRender.h"
+#include"../Class/BG/BG.h"
+#include"../Class/Player/Player.h"
+#include"../Class/Enemy/Enemy.h"
+#include"../Class/Collision/CollisionDetection.h"
+#include"../Class/GameObject/SpriteRender.h"
 
 using Microsoft::WRL::ComPtr;
 using std::unique_ptr;
