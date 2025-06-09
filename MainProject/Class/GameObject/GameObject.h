@@ -36,13 +36,18 @@ public:
 
 #pragma region Getter関数
 
-	static DirectXTK::Sprite const GetSprite  (int ID) { return sprite[ID];       }
-	static Vector2       const GetPosition    (int ID) { return position[ID];     }
-	static Vector2       const GetImagesCount (int ID) { return imagesCount[ID];  }
-	static Vector2       const GetImagesNumber(int ID) { return imagesNumber[ID]; }
-	static Color         const GetColor       (int ID) { return color[ID];        }
-	static float         const GetAngle       (int ID) { return angle[ID];        }
-	static SpriteEffects const GetSpEffect    (int ID) { return spEffect[ID];     }
+	/// <summary>
+	/// mapのvalueがvector型の為、vector用の要素数が必要
+	/// </summary>
+	/// <param name="ID">key</param>
+	/// <param name="count">value</param>
+	static DirectXTK::Sprite const GetSprite  (int ID, int count) { return sprite[ID][count];	    }
+	static Vector2       const GetPosition    (int ID, int count) { return position[ID][count];     }
+	static Vector2       const GetImagesCount (int ID, int count) { return imagesCount[ID][count];  }
+	static Vector2       const GetImagesNumber(int ID, int count) { return imagesNumber[ID][count]; }
+	static Color         const GetColor       (int ID, int count) { return color[ID][count];        }
+	static float         const GetAngle       (int ID, int count) { return angle[ID][count];        }
+	static SpriteEffects const GetSpEffect    (int ID, int count) { return spEffect[ID][count];     }
 
 #pragma endregion
 
