@@ -15,14 +15,14 @@ class GameObject
 private:
 	static int loadCount;
 
-	static DirectXTK::Sprite sprite  [MAX_ID_NUMBER];
-	static Vector2       position    [MAX_ID_NUMBER];
-	static Vector2       imagesCount [MAX_ID_NUMBER];
-	static Vector2       imagesNumber[MAX_ID_NUMBER];
-	static Color         color       [MAX_ID_NUMBER];
-	static float         angle       [MAX_ID_NUMBER];
-	static SpriteEffects spEffect    [MAX_ID_NUMBER];
-	static bool          isRender	 [MAX_ID_NUMBER];
+	static map<int, vector<DirectXTK::Sprite>> sprite;
+	static map<int, vector<Vector2>> position;
+	static map<int, vector<Vector2>> imagesCount;
+	static map<int, vector<Vector2>> imagesNumber;
+	static map<int, vector<Color>>   color;
+	static map<int, vector<float>>   angle;
+	static map<int, vector<SpriteEffects>> spEffect;
+	static map<int, vector<bool>>    isRender;
 
 	void Initialize();
 	static DirectXTK::SpriteBatch spriteBatch;
