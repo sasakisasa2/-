@@ -203,9 +203,9 @@
     <ClInclude Include="Base\wiGamepad\wiVector.h" />
     <ClInclude Include="Base\wiGamepad\wiXInput.h" />
     <ClInclude Include="Class\BG.h" />
+    <ClInclude Include="Class\BG\BG.h" />
     <ClInclude Include="Class\CollisionDetection.h" />
     <ClInclude Include="Class\Enemy.h" />
-    <ClInclude Include="Class\GameObject.h" />
     <ClInclude Include="Class\ObjectID.h" />
     <ClInclude Include="Class\Player.h" />
     <ClInclude Include="Class\PlayerAnimation.h" />
@@ -235,6 +235,7 @@
     <ClCompile Include="Base\wiGamepad\wiRawGamepad.cpp" />
     <ClCompile Include="Base\wiGamepad\wiXInput.cpp" />
     <ClCompile Include="Class\BG.cpp" />
+    <ClCompile Include="Class\BG\BG.cpp" />
     <ClCompile Include="Class\CollisionDetection.cpp" />
     <ClCompile Include="Class\Enemy.cpp" />
     <ClCompile Include="Class\Player.cpp" />

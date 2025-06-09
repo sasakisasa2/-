@@ -1,7 +1,7 @@
 #pragma once
-#include"SpriteRender.h"
+#include"GameObject.h"
 
-class Enemy:public SpriteRender
+class Enemy:public GameObject
 {
 private:
 

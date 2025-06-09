@@ -1,5 +1,5 @@
 #pragma once
-#include"SpriteRender.h"
+#include"GameObject.h"
 #include<map>
 
 class CollisionDetection
@@ -10,9 +10,9 @@ public:
 	~CollisionDetection() { }
 
 	bool Detection(Vector2 ob1, Vector2 ob2);
-	void Detection(int ID, SpriteRender*&);
+	void Detection(int ID, GameObject*&);
 
 	void RegisterCollision(int ID1, int ID2);
 
-	std::map<int,std::vector<SpriteRender*>> cmap;
+	std::map<int,std::vector<GameObject*>> cmap;
 };

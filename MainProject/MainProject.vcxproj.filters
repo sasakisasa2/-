@@ -22,6 +22,24 @@
     <Filter Include="Class">
       <UniqueIdentifier>{d1ac7a08-99df-4d9e-81bb-d47c838889e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\BG">
+      <UniqueIdentifier>{b670de80-1bd6-4af3-9673-babcabe83319}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Enemy">
+      <UniqueIdentifier>{3a8c76be-e964-491a-b2a7-bbc153e715ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Player">
+      <UniqueIdentifier>{915a4d96-3fc5-402a-bb5e-bd9b6c99f9fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Collision">
+      <UniqueIdentifier>{32ba69c1-c102-4ac0-a542-4f1570e6053d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Player\Animation">
+      <UniqueIdentifier>{9be5f74b-4885-4c79-854b-df663823b267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\GameObject">
+      <UniqueIdentifier>{95e8f853-7874-4e32-bc51-05f13184da44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\pch.h">
@@ -90,29 +108,29 @@
     <ClInclude Include="Base\Toolkits\InputSystem.h">
       <Filter>Base\Toolkit</Filter>
     </ClInclude>
-    <ClInclude Include="Class\BG.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\GameObject.h">
-      <Filter>Class</Filter>
-    </ClInclude>
     <ClInclude Include="Class\ObjectID.h">
       <Filter>Class</Filter>
     </ClInclude>
-    <ClInclude Include="Class\SpriteRender.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\Player.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\PlayerAnimation.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\Enemy.h">
-      <Filter>Class</Filter>
+    <ClInclude Include="Class\BG.h">
+      <Filter>Class\BG</Filter>
     </ClInclude>
     <ClInclude Include="Class\CollisionDetection.h">
-      <Filter>Class</Filter>
+      <Filter>Class\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Enemy.h">
+      <Filter>Class\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Player.h">
+      <Filter>Class\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\PlayerAnimation.h">
+      <Filter>Class\Player\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\SpriteRender.h">
+      <Filter>Class\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\BG\BG.h">
+      <Filter>Class\BG</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -144,22 +162,25 @@
       <Filter>Base\Toolkit</Filter>
     </ClCompile>
     <ClCompile Include="Class\BG.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\SpriteRender.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\Player.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\PlayerAnimation.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\Enemy.cpp">
-      <Filter>Class</Filter>
+      <Filter>Class\BG</Filter>
     </ClCompile>
     <ClCompile Include="Class\CollisionDetection.cpp">
-      <Filter>Class</Filter>
+      <Filter>Class\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Enemy.cpp">
+      <Filter>Class\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Player.cpp">
+      <Filter>Class\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\PlayerAnimation.cpp">
+      <Filter>Class\Player\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\SpriteRender.cpp">
+      <Filter>Class\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\BG\BG.cpp">
+      <Filter>Class\BG</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

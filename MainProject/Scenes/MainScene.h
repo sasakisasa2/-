@@ -9,7 +9,7 @@
 #include"../Class/Player/Player.h"
 #include"../Class/Enemy/Enemy.h"
 #include"../Class/Collision/CollisionDetection.h"
-#include"../Class/GameObject/SpriteRender.h"
+#include"../Class/GameObject/GameObject.h"
 
 using Microsoft::WRL::ComPtr;
 using std::unique_ptr;
@@ -44,7 +44,7 @@ public:
 	void Render() override;
 
 private:
-	SpriteRender* ob[MAX_ID_NUMBER];
-	SpriteRender* spRen;
+	GameObject* ob[MAX_ID_NUMBER];
+	GameObject* spRen;
 	CollisionDetection CD;
 };

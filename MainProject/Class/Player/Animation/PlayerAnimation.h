@@ -1,7 +1,7 @@
 #pragma once
-#include"SpriteRender.h"
+#include"GameObject.h"
 
-class PlayerAnimation:public SpriteRender
+class PlayerAnimation:public GameObject
 {
 private:
 	float time;

@@ -1,10 +1,10 @@
 #pragma once
-#include"SpriteRender.h"
+#include"GameObject.h"
 
 using namespace DirectX;
 using namespace SimpleMath;
 
-class BG:public SpriteRender
+class BG:public GameObject
 {
 private:
 

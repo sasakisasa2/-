@@ -8,7 +8,7 @@ using namespace DirectX;
 using namespace SimpleMath;
 using namespace ObjectID;
 
-class SpriteRender
+class GameObject
 {	
 private:
 	static int loadCount;
@@ -61,8 +61,8 @@ public:
 
 #pragma endregion
 
-    SpriteRender() { Initialize(); }
-	virtual ~SpriteRender(){ }
+    GameObject() { Initialize(); }
+	virtual ~GameObject(){ }
 
 	static void Load();
 	virtual void SetDate()   = 0;

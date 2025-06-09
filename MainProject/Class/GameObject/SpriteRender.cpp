@@ -1,19 +1,19 @@
-#include "SpriteRender.h"
+#include "GameObject.h"
 
 // ê√ìIÉÅÉìÉoïœêîÇÃíËã`
-int     SpriteRender::loadCount;
-DirectXTK::Sprite SpriteRender::sprite[MAX_ID_NUMBER];
-Vector2 SpriteRender::position    [MAX_ID_NUMBER];
-Vector2 SpriteRender::imagesCount [MAX_ID_NUMBER];
-Vector2 SpriteRender::imagesNumber[MAX_ID_NUMBER];
-Color   SpriteRender::color       [MAX_ID_NUMBER];
-float   SpriteRender::angle       [MAX_ID_NUMBER];
-SpriteEffects SpriteRender::spEffect[MAX_ID_NUMBER];
-bool    SpriteRender::isRender    [MAX_ID_NUMBER];
-DirectXTK::SpriteBatch SpriteRender::spriteBatch;
+int     GameObject::loadCount;
+DirectXTK::Sprite GameObject::sprite[MAX_ID_NUMBER];
+Vector2 GameObject::position    [MAX_ID_NUMBER];
+Vector2 GameObject::imagesCount [MAX_ID_NUMBER];
+Vector2 GameObject::imagesNumber[MAX_ID_NUMBER];
+Color   GameObject::color       [MAX_ID_NUMBER];
+float   GameObject::angle       [MAX_ID_NUMBER];
+SpriteEffects GameObject::spEffect[MAX_ID_NUMBER];
+bool    GameObject::isRender    [MAX_ID_NUMBER];
+DirectXTK::SpriteBatch GameObject::spriteBatch;
 
 
-void SpriteRender::Initialize()
+void GameObject::Initialize()
 {
 	loadCount = 0;
 	for (int ID = 0; ID < ObjectID::MAX_ID_NUMBER; ID++)
@@ -28,7 +28,7 @@ void SpriteRender::Initialize()
 	}
 }
 
-void SpriteRender::Initialize(int ID)
+void GameObject::Initialize(int ID)
 {
 	position[ID]     = Vector2::Zero;
 	imagesCount[ID]  = Vector2::Zero;
@@ -39,7 +39,7 @@ void SpriteRender::Initialize(int ID)
 	isRender[ID]     = false;
 }
 
-void SpriteRender::Load()
+void GameObject::Load()
 {
 	if (loadCount >= 1) { return; }
 	loadCount++;
@@ -72,7 +72,7 @@ void SpriteRender::Load()
 	uploadResourcesFinished.wait();
 }
 
-void SpriteRender::Render()
+void GameObject::Render()
 {
 
 	auto&& heap = DXTK->DescriptorHeap->Heap();

@@ -1,16 +1,16 @@
 #pragma once
-#include"SpriteRender.h"
+#include"GameObject.h"
 #include"PlayerAnimation.h"
 
 using namespace DirectX;
 using namespace SimpleMath;
 
-class Player:public SpriteRender
+class Player:public GameObject
 {
 private:
 
 	float speed;
-	SpriteRender* anime;
+	GameObject* anime;
 
 public:
 	Player():speed(500.0f){ anime = new PlayerAnimation(); }
