@@ -41,14 +41,14 @@ public:
 	/// </summary>
 	/// <param name="ID">key</param>
 	/// <param name="count">value</param>
-	static DirectXTK::Sprite const GetSprite  (int ID, int count) { return sprite[ID][count];	    }
-	static Vector2       const GetPosition    (int ID, int count) { return position[ID][count];     }
-	static Vector2       const GetImagesCount (int ID, int count) { return imagesCount[ID][count];  }
+	static DirectXTK::Sprite const GetSprite  (int ID, int count) { return sprite      [ID][count];	}
+	static Vector2       const GetPosition    (int ID, int count) { return position    [ID][count]; }
+	static Vector2       const GetImagesCount (int ID, int count) { return imagesCount [ID][count]; }
 	static Vector2       const GetImagesNumber(int ID, int count) { return imagesNumber[ID][count]; }
-	static Color         const GetColor       (int ID, int count) { return color[ID][count];        }
-	static float         const GetAngle       (int ID, int count) { return angle[ID][count];        }
-	static SpriteEffects const GetSpEffect    (int ID, int count) { return spEffect[ID][count];     }
-	static bool          const GetIsRender    (int ID, int count) { return isRender[ID][count];     }
+	static Color         const GetColor       (int ID, int count) { return color       [ID][count]; }
+	static float         const GetAngle       (int ID, int count) { return angle       [ID][count]; }
+	static SpriteEffects const GetSpEffect    (int ID, int count) { return spEffect    [ID][count]; }
+	static bool          const GetIsRender    (int ID, int count) { return isRender    [ID][count]; }
 
 #pragma endregion
 
