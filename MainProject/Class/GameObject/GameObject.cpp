@@ -1,16 +1,16 @@
 #include "GameObject.h"
 
 // ê√ìIÉÅÉìÉoïœêîÇÃíËã`
-int     GameObject::loadCount;
-DirectXTK::Sprite GameObject::sprite[MAX_ID_NUMBER];
-Vector2 GameObject::position    [MAX_ID_NUMBER];
-Vector2 GameObject::imagesCount [MAX_ID_NUMBER];
-Vector2 GameObject::imagesNumber[MAX_ID_NUMBER];
-Color   GameObject::color       [MAX_ID_NUMBER];
-float   GameObject::angle       [MAX_ID_NUMBER];
-SpriteEffects GameObject::spEffect[MAX_ID_NUMBER];
-bool    GameObject::isRender    [MAX_ID_NUMBER];
-DirectXTK::SpriteBatch GameObject::spriteBatch;
+int                                GameObject::loadCount;
+map<int,vector<DirectXTK::Sprite>> GameObject::sprite;
+map<int, vector<Vector2>>          GameObject::position;
+map<int, vector<Vector2>>          GameObject::imagesCount;
+map<int, vector<Vector2>>          GameObject::imagesNumber;
+map<int, vector<Color>>            GameObject::color;
+map<int, vector<float>>            GameObject::angle;
+map<int, vector<SpriteEffects>>    GameObject::spEffect;
+map<int, vector<bool>>             GameObject::isRender;
+DirectXTK::SpriteBatch             GameObject::spriteBatch;
 
 
 void GameObject::Initialize()
