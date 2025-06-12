@@ -48,6 +48,7 @@ public:
 	static Color         const GetColor       (int ID, int count) { return color[ID][count];        }
 	static float         const GetAngle       (int ID, int count) { return angle[ID][count];        }
 	static SpriteEffects const GetSpEffect    (int ID, int count) { return spEffect[ID][count];     }
+	static bool          const GetIsRender    (int ID, int count) { return isRender[ID][count];     }
 
 #pragma endregion
 
@@ -76,6 +77,4 @@ public:
 	virtual void UpDate()    = 0;
 	virtual void Collision() = 0;
 	static void Render();
-	static bool const GetIsRender(int ID) { return isRender[ID]; }
-	
 };
