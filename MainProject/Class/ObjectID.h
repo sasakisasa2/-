@@ -2,11 +2,11 @@ namespace ObjectID
 {
 	enum BackGround
 	{
-		BackGroundForest
+		BGID
 	};
 	enum Character
 	{
-		PlayerID = BackGroundForest+1,
+		PlayerID = BGID +1,
 		EnemyID
 	};
 	enum Effects
