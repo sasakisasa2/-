@@ -37,7 +37,7 @@ public:
 #pragma region Getter関数
 
 	/// <summary>
-	/// mapのvalueがvector型の為、vector用の要素数が必要
+	/// mapのvalueがvector型の為、vector用の要素数が引数として必要
 	/// </summary>
 	/// <param name="ID">key</param>
 	/// <param name="count">value</param>
