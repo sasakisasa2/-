@@ -16,27 +16,33 @@ DirectXTK::SpriteBatch             GameObject::spriteBatch;
 void GameObject::Initialize()
 {
 	loadCount = 0;
-	for (int ID = 0; ID < ObjectID::MAX_ID_NUMBER; ID++)
+	for (int id = 0; id < ObjectID::MAX_ID_NUMBER; id++)
 	{
-		position[ID]     = Vector2::Zero;
-		imagesCount[ID]  = Vector2::Zero;
-		imagesNumber[ID] = Vector2::One;
-		color[ID]		 = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-		angle[ID]        = 0.0f;
-		spEffect[ID]     = SpriteEffects_None;
-		isRender[ID]     = true;
+		for (int count = 0; count < MAX_OBJECT_NUMBER[id]; count++)
+		{
+			position    [id][count] = Vector2::Zero;
+			imagesCount [id][count] = Vector2::Zero;
+			imagesNumber[id][count] = Vector2::One;
+			color       [id][count] = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+			angle       [id][count] = 0.0f;
+			spEffect    [id][count] = SpriteEffects_None;
+			isRender    [id][count] = true;
+		}
 	}
 }
 
-void GameObject::Initialize(int ID)
+void GameObject::Initialize(int id)
 {
-	position[ID]     = Vector2::Zero;
-	imagesCount[ID]  = Vector2::Zero;
-	imagesNumber[ID] = Vector2::One;
-	color[ID]        = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-	angle[ID]        = 0.0f;
-	spEffect[ID]     = SpriteEffects_None;
-	isRender[ID]     = false;
+	for (int count = 0; count < MAX_OBJECT_NUMBER[id]; count++)
+	{
+		position    [id][count] = Vector2::Zero;
+		imagesCount [id][count] = Vector2::Zero;
+		imagesNumber[id][count] = Vector2::One;
+		color       [id][count] = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+		angle       [id][count] = 0.0f;
+		spEffect    [id][count] = SpriteEffects_None;
+		isRender    [id][count] = false;
+	}
 }
 
 void GameObject::Load()
