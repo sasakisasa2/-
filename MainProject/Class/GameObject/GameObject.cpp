@@ -2,7 +2,7 @@
 
 // Ã“Iƒƒ“ƒo•Ï”‚Ì’è‹`
 int                                GameObject::loadCount;
-map<int,vector<DirectXTK::Sprite>> GameObject::sprite;
+DirectXTK::Sprite                  GameObject::sprite[MAX_ID_NUMBER];
 map<int, vector<Vector2>>          GameObject::position;
 map<int, vector<Vector2>>          GameObject::imagesCount;
 map<int, vector<Vector2>>          GameObject::imagesNumber;

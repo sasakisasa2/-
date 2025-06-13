@@ -15,7 +15,7 @@ class GameObject
 private:
 	static int loadCount;
 
-	static map<int, vector<DirectXTK::Sprite>> sprite;
+	static DirectXTK::Sprite sprite[MAX_ID_NUMBER];
 	static map<int, vector<Vector2>> position;
 	static map<int, vector<Vector2>> imagesCount;
 	static map<int, vector<Vector2>> imagesNumber;
@@ -41,7 +41,7 @@ public:
 	/// </summary>
 	/// <param name="ID">key</param>
 	/// <param name="count">value</param>
-	static DirectXTK::Sprite const GetSprite  (int ID, int count) { return sprite      [ID][count];	}
+	static DirectXTK::Sprite const GetSprite  (int ID, int count) { return sprite      [ID]; }
 	static Vector2       const GetPosition    (int ID, int count) { return position    [ID][count]; }
 	static Vector2       const GetImagesCount (int ID, int count) { return imagesCount [ID][count]; }
 	static Vector2       const GetImagesNumber(int ID, int count) { return imagesNumber[ID][count]; }
@@ -56,8 +56,8 @@ public:
 
 	static void SetSpriteSize(XMUINT2 setSize, int ID, int count)
 	{
-		sprite[ID][count].size.x = setSize.x;
-		sprite[ID][count].size.y = setSize.y;
+		sprite[ID].size.x = setSize.x;
+		sprite[ID].size.y = setSize.y;
 	}
 	static void SetPosition    (Vector2 setPos,   int ID, int count)       { position    [ID][count] = setPos;    }
 	static void SetImagesCount (Vector2 setCount, int ID, int count)       { imagesCount [ID][count] = setCount;  }
@@ -69,7 +69,7 @@ public:
 
 #pragma endregion
 
-    GameObject() { Initialize(); }
+    GameObject(){ Initialize(); }
 	virtual ~GameObject(){ }
 
 	static void Load();
