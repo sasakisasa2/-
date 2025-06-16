@@ -36,12 +36,13 @@ public:
 
 #pragma region Getter関数
 
+	static DirectXTK::Sprite const GetSprite  (int ID) { return sprite      [ID]; }
+	
 	/// <summary>
 	/// mapのvalueがvector型の為、vector用の要素数が引数として必要
 	/// </summary>
 	/// <param name="ID">key</param>
 	/// <param name="count">value</param>
-	static DirectXTK::Sprite const GetSprite  (int ID, int count) { return sprite      [ID]; }
 	static Vector2       const GetPosition    (int ID, int count) { return position    [ID][count]; }
 	static Vector2       const GetImagesCount (int ID, int count) { return imagesCount [ID][count]; }
 	static Vector2       const GetImagesNumber(int ID, int count) { return imagesNumber[ID][count]; }
@@ -54,11 +55,17 @@ public:
 
 #pragma region Setter関数
 
-	static void SetSpriteSize(XMUINT2 setSize, int ID, int count)
+	static void SetSpriteSize(XMUINT2 setSize, int ID)
 	{
 		sprite[ID].size.x = setSize.x;
 		sprite[ID].size.y = setSize.y;
 	}
+
+	/// <summary>
+	/// mapのvalueがvector型の為、vector用の要素数が引数として必要
+	/// </summary>
+	/// <param name="ID">key</param>
+	/// <param name="count">value</param>
 	static void SetPosition    (Vector2 setPos,   int ID, int count)       { position    [ID][count] = setPos;    }
 	static void SetImagesCount (Vector2 setCount, int ID, int count)       { imagesCount [ID][count] = setCount;  }
 	static void SetImagesNumber(Vector2 setNumber,int ID, int count)       { imagesNumber[ID][count] = setNumber; }
