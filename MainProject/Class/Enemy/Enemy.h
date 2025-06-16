@@ -1,5 +1,6 @@
 #pragma once
 #include"../GameObject/GameObject.h"
+#include<random>
 
 class Enemy:public GameObject
 {
