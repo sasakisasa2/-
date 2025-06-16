@@ -51,5 +51,5 @@ void Player::UpDate(int count)
 
 void Player::Collision(int count)
 {
-	SetIsRender(false, PlayerID,count);
+	//SetIsRender(false, PlayerID,count);
 }
