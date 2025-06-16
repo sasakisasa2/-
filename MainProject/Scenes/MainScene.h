@@ -10,6 +10,8 @@
 #include"../Class/Enemy/Enemy.h"
 #include"../Class/Collision/CollisionDetection.h"
 #include"../Class/GameObject/GameObject.h"
+#include<map>
+#include<vector>
 
 using Microsoft::WRL::ComPtr;
 using std::unique_ptr;
@@ -44,7 +46,7 @@ public:
 	void Render() override;
 
 private:
-	GameObject* ob[MAX_ID_NUMBER];
+	std::map<int,vector<GameObject*>> ob;
 	GameObject* spRen;
 	CollisionDetection CD;
 };
