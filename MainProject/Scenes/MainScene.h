@@ -46,6 +46,7 @@ public:
 	void Render() override;
 
 private:
+	bool isDelete[MAX_ID_NUMBER];
 	std::map<int,vector<GameObject*>> ob;
 	GameObject* spRen;
 	CollisionDetection CD;

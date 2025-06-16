@@ -13,7 +13,7 @@
 using namespace SimpleMath;
 
 // Initialize member variables.
-MainScene::MainScene()
+MainScene::MainScene():isDelete()
 {
 	spRen = new Player();
 	ob[BGID]    .emplace_back(new BG());
@@ -103,6 +103,9 @@ NextScene MainScene::Update(const float deltaTime)
 	// TODO: Add your game logic here.
 	for (int i = 0; i < MAX_ID_NUMBER; i++)
 	{
+		if (ob[i].empty())
+			continue;
+
 		int deleteCount = 0;
 		for (int count = 0; count < MAX_OBJECT_NUMBER[i]; count++)
 		{
@@ -112,7 +115,6 @@ NextScene MainScene::Update(const float deltaTime)
 				{
 					delete ob[i][count];
 					ob[i][count] = nullptr;
-					CD.MapErase(i);
 					continue;
 				}
 				ob[i][count]->UpDate(count);
@@ -122,18 +124,16 @@ NextScene MainScene::Update(const float deltaTime)
 				deleteCount++;
 			}
 		}
-		if (deleteCount == MAX_OBJECT_NUMBER[i])
-			ob.erase(i);
-	}
-
-	for (int ID1 = 0; ID1 < ob[PlayerID].size(); ID1++)
-	{
-		for (int ID2 = 0; ID2 < ob[EnemyID].size(); ID2++)
+		if (deleteCount == MAX_OBJECT_NUMBER[i]&& !isDelete[i])
 		{
-			if (ob[PlayerID][ID1] && ob[EnemyID][ID2])
-				CD.RegisterCollision(PlayerID, EnemyID);
+			CD.MapErase(i);
+			ob.erase(i);
+			isDelete[i] = true;
 		}
 	}
+
+	if (!ob[PlayerID].empty() && !ob[EnemyID].empty())
+		CD.RegisterCollision(PlayerID, EnemyID);
 
 	return NextScene::Continue;
 }
