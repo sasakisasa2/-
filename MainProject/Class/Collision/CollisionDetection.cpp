@@ -29,8 +29,8 @@ void CollisionDetection::RegisterCollision(int ID1, int ID2)
 		{
 			if (Detection(cd1[i]->GetPosition(ID1+i), cd2[j]->GetPosition(ID2+j)))
 			{
-				cd1[i]->Collision();
-				cd2[j]->Collision();
+				cd1[i]->Collision(ID1);
+				cd2[j]->Collision(ID2);
 				cmap.erase(ID1);
 				cmap.erase(ID2);
 			}
