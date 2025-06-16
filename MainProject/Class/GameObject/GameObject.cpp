@@ -89,31 +89,34 @@ void GameObject::Render()
 
 	for (int ID = 0; ID < ObjectID::MAX_ID_NUMBER; ID++)
 	{
-		if (!isRender[ID])
-			continue;
+		for (int count = 0; count < MAX_OBJECT_NUMBER[ID]; count++)
+		{
+			if (!isRender[ID][count])
+				continue;
 
-		Vector2 size;//ˆê–‡‚Ì‘å‚«‚³
-		size.x = (float)sprite[ID].size.x / imagesNumber[ID].x;
-		size.y = (float)sprite[ID].size.y / imagesNumber[ID].y;
+			Vector2 size;//ˆê–‡‚Ì‘å‚«‚³
+			size.x = (float)sprite[ID].size.x / imagesNumber[ID][count].x;
+			size.y = (float)sprite[ID].size.y / imagesNumber[ID][count].y;
 
-		Vector2 minSize;//‰æ‘œ‚ÌŒ´“_
-		minSize.x = size.x * imagesCount[ID].x;
-		minSize.y = size.y * imagesCount[ID].y;
+			Vector2 minSize;//‰æ‘œ‚ÌŒ´“_
+			minSize.x = size.x * imagesCount[ID][count].x;
+			minSize.y = size.y * imagesCount[ID][count].y;
 
-		RECT rect;
-		rect = RectWH((int)minSize.x, (int)minSize.y, (int)size.x, (int)size.y);
+			RECT rect;
+			rect = RectWH((int)minSize.x, (int)minSize.y, (int)size.x, (int)size.y);
 
-		spBatch->Draw
-		(
-			sprite[ID].handle, sprite[ID].size,
-			position[ID],
-			&rect,
-			color[ID],
-			angle[ID] * Mathf::Deg2Rad,
-			size / 2.0f,
-			1.0f,
-			spEffect[ID]
-		);
+			spBatch->Draw
+			(
+				sprite[ID].handle, sprite[ID].size,
+				position[ID][count],
+				&rect,
+				color[ID][count],
+				angle[ID][count] * Mathf::Deg2Rad,
+				size / 2.0f,
+				1.0f,
+				spEffect[ID][count]
+			);
+		}
 	}
 
 	spriteBatch->End();
