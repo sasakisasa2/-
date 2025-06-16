@@ -80,8 +80,8 @@ public:
 	virtual ~GameObject(){ }
 
 	static void Load();
-	virtual void SetDate(int count)   = 0;
-	virtual void UpDate(int count)    = 0;
+	virtual void SetDate()   = 0;
+	virtual void UpDate()    = 0;
 	virtual void Collision(int count) = 0;
 	static void Render();
 };
