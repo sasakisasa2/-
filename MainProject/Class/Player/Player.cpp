@@ -1,14 +1,14 @@
 #include "Player.h"
 
-void Player::SetDate(int count)
+void Player::SetDate()
 { 
-	SetPosition(Vector2(300.0f, 300.0f), PlayerID,count);
-	anime->SetDate(count);
+	SetPosition(Vector2(300.0f, 300.0f), PlayerID,0);
+	anime->SetDate();
 }
 
-void Player::UpDate(int count)
+void Player::UpDate()
 {
-	Vector2 pos = GetPosition(PlayerID,count);
+	Vector2 pos = GetPosition(PlayerID,0);
 
 	Vector2 move;
 
@@ -29,10 +29,10 @@ void Player::UpDate(int count)
 
 	border = Vector4
 	(
-		((float)GetSprite(PlayerID).size.x / GetImagesNumber(PlayerID,count).x) / 2.0f,
-		((float)GetSprite(PlayerID).size.y / GetImagesNumber(PlayerID,count).y) / 2.0f,
-		DXTK->SwapChain.Width  - ((float)GetSprite(PlayerID).size.x / GetImagesNumber(PlayerID,count).x) / 2.0f,
-		DXTK->SwapChain.Height - ((float)GetSprite(PlayerID).size.y / GetImagesNumber(PlayerID,count).y) / 2.0f
+		((float)GetSprite(PlayerID).size.x / GetImagesNumber(PlayerID,0).x) / 2.0f,
+		((float)GetSprite(PlayerID).size.y / GetImagesNumber(PlayerID,0).y) / 2.0f,
+		DXTK->SwapChain.Width  - ((float)GetSprite(PlayerID).size.x / GetImagesNumber(PlayerID,0).x) / 2.0f,
+		DXTK->SwapChain.Height - ((float)GetSprite(PlayerID).size.y / GetImagesNumber(PlayerID,0).y) / 2.0f
 	);
 
 	if (pos.x > border.z)//‰E’[
@@ -44,9 +44,9 @@ void Player::UpDate(int count)
 	if (pos.y < border.y)//ã’[
 		pos.y = border.y;
 
-	SetPosition(pos, PlayerID,count);
+	SetPosition(pos, PlayerID,0);
 
-	anime->UpDate(count);
+	anime->UpDate();
 }
 
 void Player::Collision(int count)

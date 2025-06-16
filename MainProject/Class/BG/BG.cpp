@@ -1,6 +1,6 @@
 #include "BG.h"
 
-void BG::SetDate(int count)
+void BG::SetDate()
 {
 	SetPosition
 	(
@@ -11,13 +11,13 @@ void BG::SetDate(int count)
 			(float)DXTK->SwapChain.Height / 2.0f
 		),
 		BGID,
-		count
+		0
 	);
 }
 
-void BG::UpDate(int count)
+void BG::UpDate()
 {
-	Vector2 pos = GetPosition(BGID,count);
+	Vector2 pos = GetPosition(BGID,0);
 
 	pos.x -= speed * DXTK->Time.deltaTime;
 	
@@ -26,5 +26,5 @@ void BG::UpDate(int count)
 		pos.x = (float)GetSprite(BGID).size.x / 2.0f;
 	}
 
-	SetPosition(pos, BGID,count);
+	SetPosition(pos, BGID,0);
 }

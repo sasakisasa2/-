@@ -13,7 +13,7 @@ private:
 
 public:
 	BG():speed(500.0f){ }
-	void SetDate  (int count)override;
-	void UpDate   (int count)override;
+	void SetDate  ()override;
+	void UpDate   ()override;
 	void Collision(int count)override {};
 };

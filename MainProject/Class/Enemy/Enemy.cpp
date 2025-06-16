@@ -1,6 +1,6 @@
 #include "Enemy.h"
 
-void Enemy::SetDate(int count)
+void Enemy::SetDate()
 { 
 	std::random_device rand_dev; 
 	std::mt19937                          random = std::mt19937(rand_dev());
@@ -10,17 +10,20 @@ void Enemy::SetDate(int count)
 	SetSpriteSize(XMUINT2(100.0f, 100.0f), EnemyID);
 }
 
-void Enemy::UpDate(int count)
+void Enemy::UpDate()
 {
-	Vector2 pos = GetPosition(EnemyID,count);
+	for (int i = 0; i < MAX_OBJECT_NUMBER[EnemyID]; i++)
+	{
+		Vector2 pos = GetPosition(EnemyID, i);
 
-	Vector2 move = GetPosition(PlayerID, 0) - pos;
+		Vector2 move = GetPosition(PlayerID, 0) - pos;
 
-	move.Normalize();
+		move.Normalize();
 
-	pos += move * speed * DXTK->Time.deltaTime;
+		pos += move * speed * DXTK->Time.deltaTime;
 
-	SetPosition(pos, EnemyID, count);
+		SetPosition(pos, EnemyID, i);
+	}
 }
 
 void Enemy::Collision(int count)
