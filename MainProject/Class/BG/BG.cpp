@@ -10,7 +10,8 @@ void BG::SetDate(int count)
 			(float)GetSprite(BGID).size.x / 2.0f,
 			(float)DXTK->SwapChain.Height / 2.0f
 		),
-		BGID
+		BGID,
+		count
 	);
 }
 
