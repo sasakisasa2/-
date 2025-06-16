@@ -35,13 +35,16 @@ void GameObject::Initialize(int id)
 {
 	for (int count = 0; count < MAX_OBJECT_NUMBER[id]; count++)
 	{
-		position    [id][count] = Vector2::Zero;
-		imagesCount [id][count] = Vector2::Zero;
-		imagesNumber[id][count] = Vector2::One;
-		color       [id][count] = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-		angle       [id][count] = 0.0f;
-		spEffect    [id][count] = SpriteEffects_None;
-		isRender    [id][count] = false;
+		if (!isRender[id][count]) 
+		{
+			position    [id][count] = Vector2::Zero;
+			imagesCount [id][count] = Vector2::Zero;
+			imagesNumber[id][count] = Vector2::One;
+			color       [id][count] = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+			angle       [id][count] = 0.0f;
+			spEffect    [id][count] = SpriteEffects_None;
+			isRender    [id][count] = false;
+		}
 	}
 }
 

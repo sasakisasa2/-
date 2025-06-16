@@ -36,7 +36,7 @@ public:
 
 #pragma region Getter関数
 
-	static DirectXTK::Sprite const GetSprite  (int ID) { return sprite      [ID]; }
+	static DirectXTK::Sprite const GetSprite  (int ID) { return sprite[ID]; }
 	
 	/// <summary>
 	/// mapのvalueがvector型の為、vector用の要素数が引数として必要
