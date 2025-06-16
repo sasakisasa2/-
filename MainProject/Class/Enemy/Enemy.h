@@ -10,7 +10,7 @@ private:
 public:
 	Enemy():speed(100.0f){ }
 	~Enemy()override{Initialize(EnemyID);}
-	void SetDate()override;
-	void UpDate()override;
-	void Collision()override;
+	void SetDate  (int count)override;
+	void UpDate   (int count)override;
+	void Collision(int count)override;
 };
