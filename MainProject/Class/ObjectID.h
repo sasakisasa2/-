@@ -18,7 +18,7 @@ namespace ObjectID
 	{
 		1,  //BG
 		1,  //Player
-		100 //Enemy
+		10000 //Enemy
 	};
 
 	static const wchar_t* SpriteName[MAX_ID_NUMBER] = 
