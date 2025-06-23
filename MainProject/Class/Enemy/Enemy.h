@@ -7,6 +7,8 @@ class Enemy:public GameObject
 private:
 
 	float speed;
+	std::mt19937 random;
+	std::uniform_real_distribution<float> enemyNumber;
 
 public:
 	Enemy():speed(100.0f){ }
