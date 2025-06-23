@@ -23,14 +23,14 @@ void CollisionDetection::RegisterCollision(int ID1, int ID2)
 {
 	auto&& cd1 = cmap[ID1];
 	auto&& cd2 = cmap[ID2];
-	for (int i = 0; i < cd1.size(); i++)
+	for (int i = 0; i < MAX_OBJECT_NUMBER[ID1]; i++)
 	{
-		for (int j = 0; j < cd2.size(); j++) 
+		for (int j = 0; j < MAX_OBJECT_NUMBER[ID2]; j++)
 		{
-			if (Detection(cd1[i]->GetPosition(ID1,i), cd2[j]->GetPosition(ID2,j)))
+			if (Detection(cd1[0]->GetPosition(ID1,i), cd2[0]->GetPosition(ID2,j)))
 			{
-				cd1[i]->Collision(i);
-				cd2[j]->Collision(j);
+				cd1[0]->Collision(i);
+				cd2[0]->Collision(j);
 			}
 		}
 	}
