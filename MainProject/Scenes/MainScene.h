@@ -47,7 +47,7 @@ public:
 
 private:
 	bool isDelete[MAX_ID_NUMBER];
-	std::map<int,vector<GameObject*>> ob;
+	GameObject* ob[MAX_ID_NUMBER];
 	GameObject* spRen;
 	CollisionDetection CD;
 };

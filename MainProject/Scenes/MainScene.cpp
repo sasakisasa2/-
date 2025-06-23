@@ -16,14 +16,11 @@ using namespace SimpleMath;
 MainScene::MainScene():isDelete()
 {
 	spRen = new Player();
-	ob[BGID]    .emplace_back(new BG());
-	ob[PlayerID].emplace_back(new Player());
-	CD.Detection(PlayerID, ob[PlayerID][0]);
-	for (int count = 0; count < MAX_OBJECT_NUMBER[EnemyID]; count++)
-	{
-		ob[EnemyID].emplace_back(new Enemy());
-		CD.Detection(EnemyID,  ob[EnemyID][count]);
-	}
+	ob[BGID]    =new BG();
+	ob[PlayerID]=new Player();
+	CD.Detection(PlayerID, ob[PlayerID]);
+	ob[EnemyID] = new Enemy();
+	CD.Detection(EnemyID,  ob[EnemyID]);
 }
 
 // Start is called after the scene is created.
@@ -58,10 +55,7 @@ void MainScene::Initialize()
 {
 	for (int i = 0; i < MAX_ID_NUMBER; i++)
 	{
-		for (int count = 0; count < MAX_OBJECT_NUMBER[i]; count++)
-		{
-			ob[i][count]->SetDate(count);
-		}
+		ob[i]->SetDate();
 	}
 }
 
@@ -103,38 +97,32 @@ NextScene MainScene::Update(const float deltaTime)
 	// TODO: Add your game logic here.
 	for (int i = 0; i < MAX_ID_NUMBER; i++)
 	{
-		if (ob[i].empty())
-			continue;
+		if (ob[i])
+		{
+			ob[i]->UpDate();
+		}
 
 		int deleteCount = 0;
 		for (int count = 0; count < MAX_OBJECT_NUMBER[i]; count++)
 		{
-			if (ob[i][count])
-			{
-				if (!spRen->GetIsRender(i,count))
-				{
-					delete ob[i][count];
-					ob[i][count] = nullptr;
-					continue;
-				}
-				ob[i][count]->UpDate(count);
-			}
-			else
+			if (!spRen->GetIsRender(i,count))
 			{
 				deleteCount++;
+				continue;
 			}
 		}
-		if (deleteCount == MAX_OBJECT_NUMBER[i]&& !isDelete[i])
+
+		if (deleteCount == MAX_OBJECT_NUMBER[i])
 		{
+			delete ob[i];
+			ob[i] = nullptr;
 			CD.MapErase(i);
-			ob.erase(i);
-			isDelete[i] = true;
 		}
 	}
-
-	if (!ob[PlayerID].empty() && !ob[EnemyID].empty())
+	if (ob[PlayerID]&&ob[EnemyID])
+	{
 		CD.RegisterCollision(PlayerID, EnemyID);
-
+	}
 	return NextScene::Continue;
 }
 
