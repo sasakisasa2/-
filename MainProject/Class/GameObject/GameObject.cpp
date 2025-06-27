@@ -92,7 +92,7 @@ void GameObject::Render()
 
 	for (int ID = 0; ID < ObjectID::MAX_ID_NUMBER; ID++)
 	{
-		for (int count = 0; count < MAX_OBJECT_NUMBER[ID]; count++)
+		for (int count = 0; count < isRender[ID].size(); count++)
 		{
 			if (!isRender[ID][count])
 				continue;
