@@ -40,6 +40,12 @@
     <Filter Include="Class\GameObject">
       <UniqueIdentifier>{95e8f853-7874-4e32-bc51-05f13184da44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\Effect">
+      <UniqueIdentifier>{af29ab9c-dbf7-48af-88f4-49f996c446f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Effect\Manager">
+      <UniqueIdentifier>{437664b6-fca3-4d78-91e4-e974ae4f17ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base\pch.h">
@@ -129,6 +135,12 @@
     <ClInclude Include="Class\Player\Animation\PlayerAnimation.h">
       <Filter>Class\Player\Animation</Filter>
     </ClInclude>
+    <ClInclude Include="Class\Effect\Manager\EffectManager.h">
+      <Filter>Class\Effect\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Effect\Effect.h">
+      <Filter>Class\Effect</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base\Main.cpp">
@@ -175,6 +187,12 @@
     </ClCompile>
     <ClCompile Include="Class\Player\Animation\PlayerAnimation.cpp">
       <Filter>Class\Player\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Effect\Manager\EffectManager.cpp">
+      <Filter>Class\Effect\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Effect\Effect.cpp">
+      <Filter>Class\Effect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

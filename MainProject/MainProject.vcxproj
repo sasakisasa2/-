@@ -204,6 +204,8 @@
     <ClInclude Include="Base\wiGamepad\wiXInput.h" />
     <ClInclude Include="Class\BG\BG.h" />
     <ClInclude Include="Class\Collision\CollisionDetection.h" />
+    <ClInclude Include="Class\Effect\Effect.h" />
+    <ClInclude Include="Class\Effect\Manager\EffectManager.h" />
     <ClInclude Include="Class\Enemy\Enemy.h" />
     <ClInclude Include="Class\GameObject\GameObject.h" />
     <ClInclude Include="Class\ObjectID.h" />
@@ -235,6 +237,8 @@
     <ClCompile Include="Base\wiGamepad\wiXInput.cpp" />
     <ClCompile Include="Class\BG\BG.cpp" />
     <ClCompile Include="Class\Collision\CollisionDetection.cpp" />
+    <ClCompile Include="Class\Effect\Effect.cpp" />
+    <ClCompile Include="Class\Effect\Manager\EffectManager.cpp" />
     <ClCompile Include="Class\Enemy\Enemy.cpp" />
     <ClCompile Include="Class\GameObject\GameObject.cpp" />
     <ClCompile Include="Class\Player\Animation\PlayerAnimation.cpp" />
