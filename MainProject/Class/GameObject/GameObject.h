@@ -50,6 +50,9 @@ public:
 	static float         const GetAngle       (int ID, int count) { return angle       [ID][count]; }
 	static SpriteEffects const GetSpEffect    (int ID, int count) { return spEffect    [ID][count]; }
 	static bool          const GetIsRender    (int ID, int count) { return isRender    [ID][count]; }
+	static vector<bool>  const GetIsRender(int ID) { return isRender[ID]; }
+	static map<int, vector<bool>> const GetIsRender() { return isRender; }
+
 
 #pragma endregion
 
@@ -73,6 +76,12 @@ public:
 	static void SetAngle       (float   setAngle, int ID, int count)       { angle       [ID][count] = setAngle;  }
 	static void SetSpEffect    (SpriteEffects setEffect, int ID, int count){ spEffect    [ID][count] = setEffect; }
 	static void SetIsRender    (bool    setIsRen, int ID, int count)       { isRender    [ID][count] = setIsRen;  }
+	static void SetEraseIsRender(int ID,int number)
+	{
+		isRender[ID].swap(isRender[ID][number], isRender[ID][isRender[ID].size()]);
+		isRender[ID].pop_back();
+	}
+
 
 #pragma endregion
 
