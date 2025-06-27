@@ -102,17 +102,8 @@ NextScene MainScene::Update(const float deltaTime)
 			ob[i]->UpDate();
 		}
 
-		int deleteCount = 0;
-		for (int count = 0; count < MAX_OBJECT_NUMBER[i]; count++)
-		{
-			if (!spRen->GetIsRender(i,count))
-			{
-				deleteCount++;
-				continue;
-			}
-		}
-
-		if (deleteCount == MAX_OBJECT_NUMBER[i])
+		auto&& m = spRen->GetIsRender(i);
+		if (m.empty())
 		{
 			delete ob[i];
 			ob[i] = nullptr;
