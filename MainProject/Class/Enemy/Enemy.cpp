@@ -25,7 +25,7 @@ void Enemy::SetDate()
 
 void Enemy::UpDate()
 {
-	for (int i = 0; i < MAX_OBJECT_NUMBER[EnemyID]; i++)
+	for (int i = 0; i < GetIsRender(EnemyID).size(); i++)
 	{
 		Vector2 pos = GetPosition(EnemyID, i);
 
@@ -39,15 +39,10 @@ void Enemy::UpDate()
 	}
 	if (InputSystem.Keyboard.isPressed.Space)
 	{
-		while (true)
-		{
-			int number = (int)enemyNumber(random);
-			if (GetIsRender(EnemyID, number))
-			{
-				Collision(number);
-				break;
-			}
-		}
+		enemyNumber = std::uniform_real_distribution<float>(0.0f, GetIsRender(EnemyID).size());
+		int number = (int)enemyNumber(random);
+		SetEraseIsRender(EnemyID, number);
+		return;
 	}
 }
 
