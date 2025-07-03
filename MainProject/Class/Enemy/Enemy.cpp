@@ -7,7 +7,7 @@ void Enemy::SetDate()
 	std::uniform_real_distribution<float> x_pos_range_ = std::uniform_real_distribution<float>(0.0f, 1200.0f);
 	std::uniform_real_distribution<float> y_pos_range_ = std::uniform_real_distribution<float>(0.0f, 600.0f);
 	enemyNumber = std::uniform_real_distribution<float>(0.0f, (float)MAX_OBJECT_NUMBER[EnemyID]-0.1f);
-	SetSpriteSize(XMUINT2(100.0f, 100.0f), EnemyID);
+	SetSpriteSize(XMUINT2(100, 100), EnemyID);
 	for (int i = 0; i < MAX_OBJECT_NUMBER[EnemyID]; i++)
 	{
 		SetPosition
