@@ -41,7 +41,7 @@ void Enemy::UpDate()
 	{
 		enemyNumber = std::uniform_real_distribution<float>(0.0f, GetIsRender(EnemyID).size());
 		int number = (int)enemyNumber(random);
-		SetEraseIsRender(EnemyID, number);
+		VectorErase(EnemyID, number);
 		return;
 	}
 }
