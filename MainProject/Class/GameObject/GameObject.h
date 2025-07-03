@@ -76,11 +76,6 @@ public:
 	static void SetAngle       (float   setAngle, int ID, int count)       { angle       [ID][count] = setAngle;  }
 	static void SetSpEffect    (SpriteEffects setEffect, int ID, int count){ spEffect    [ID][count] = setEffect; }
 	static void SetIsRender    (bool    setIsRen, int ID, int count)       { isRender    [ID][count] = setIsRen;  }
-	static void SetEraseIsRender(int ID,int number)
-	{
-		isRender[ID].swap(isRender[ID][number], isRender[ID][isRender[ID].size()]);
-		isRender[ID].pop_back();
-	}
 	static void VectorErase(int ID, int number)
 	{
 		if (isRender[ID].size() > number)
