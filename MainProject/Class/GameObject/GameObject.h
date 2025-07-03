@@ -81,7 +81,26 @@ public:
 		isRender[ID].swap(isRender[ID][number], isRender[ID][isRender[ID].size()]);
 		isRender[ID].pop_back();
 	}
+	static void VectorErase(int ID, int number)
+	{
+		if (isRender[ID].size() > number)
+			return;
 
+		swap(position    [ID][number], position    [ID].back());
+		swap(imagesCount [ID][number], imagesCount [ID].back());
+		swap(imagesNumber[ID][number], imagesNumber[ID].back());
+		swap(color       [ID][number], color       [ID].back());
+		swap(angle       [ID][number], angle       [ID].back());
+		swap(spEffect    [ID][number], spEffect    [ID].back());
+		swap(isRender    [ID][number], isRender    [ID].back());
+		position    [ID].pop_back();
+		imagesCount [ID].pop_back();
+		imagesNumber[ID].pop_back();
+		color       [ID].pop_back();
+		angle       [ID].pop_back();
+		spEffect    [ID].pop_back();
+		isRender    [ID].pop_back();
+	}
 
 #pragma endregion
 
